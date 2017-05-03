@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "1212";
+var warframes = [
+	"Ash", 
+	"Atlas", 
+	"Banshee", 
+	"Chroma", 
+	"Ember", 
+	"Equinox", 
+	"Excalibur", 
+	"Frost", 
+	"Hydroid", 
+	"Inaros", 
+	"Ivara", 
+	"Limbo", 
+	"Loki", 
+	"Mag", 
+	"Mesa", 
+	"Mirage", 
+	"Nekros", 
+	"Nezha", 
+	"Nidus", 
+	"Nova", 
+	"Nyx", 
+	"Oberon", 
+	"Octavia", 
+	"Rhino", 
+	"Saryn", 
+	"Titania", 
+	"Trinity", 
+	"Valkyr", 
+	"Vauban", 
+	"Volt", 
+	"Wukong", 
+	"Zephyr" 
+    ];
+var primaries = [
+	"Amprex", 
+	"Attica",
+	"Boar",
+	"Boltor",
+	"Braton",
+	"Burston",
+	"Buzlok",
+	"Cernos",
+	"Convectrix",
+	"Daikyu",
+	"Dera",
+	"Drakgoon",
+	"Dread",
+	"Ferrox",
+	"Flux Rifle",
+	"Glaxion",
+	"Gorgon",
+	"Grakata",
+	"Grinlok",
+	"Harpak",
+	"Hek",
+	"Hema",
+	"Hind",
+	"Ignis",
+	"Javlok",
+	"Karak",
+	"Kohm",
+	"Lanka",
+	"Latron",
+	"Miter",
+	"Ogris",
+	"Opticor",
+	"Panthera",
+	"Paracyst",
+	"Paris",
+	"Penta",
+	"Phage",
+	"Quanta",
+	"Rubico",
+	"Simulor",
+	"Snipetron",
+	"Sobek",
+	"Soma",
+	"Stradavar",
+	"Strun",
+	"Supra",
+	"Sybaris",
+	"Synapse",
+	"Tenora",
+	"Tetra",
+	"Tiberon",
+	"Tigris",
+	"Tonkor",
+	"Torid",
+	"Vectis",
+	"Vulkar",
+	"Zarr",
+	"Zhuge",
+	"NONE"
+];
+var secondaries = [
+	"Acrid",
+	"Akjagara",
+	"Aklex",
+	"Aksomati",
+	"Akstiletto",
+	"Akzani",
+	"Angstrum",
+	"Atomos",
+	"Ballistica",
+	"Bolto",
+	"Akbolto",
+	"Brakk",
+	"Bronco",
+	"Akbronco",
+	"Castanas",
+	"Cestra",
+	"Dual Cestra",
+	"Despair",
+	"Detron",
+	"Dual Toxocyst",
+	"Embolist",
+	"Euphona Prime",
+	"Furis",
+	"Akfuris",
+	"Gammacor",
+	"Hikou",
+	"Kohmak",
+	"Twin Kohmak",
+	"Kraken",
+	"Kulstar",
+	"Kunai",
+	"Lato",
+	"Aklato",
+	"Lex",
+	"Magnus",
+	"Akmagnus",
+	"Marelok",
+	"Nukor",
+	"Pandero",
+	"Pox",
+	"Pyrana",
+	"Seer",
+	"Sicarus",
+	"Sonicor",
+	"Spectra",
+	"Spira",
+	"Staticor",
+	"Stug",
+	"Talons",
+	"Twin Grakatas",
+	"Twin Gremlins",
+	"Twin Rogga",
+	"Tysis",
+	"Vasto",
+	"Akvasto",
+	"Viper",
+	"Twin Vipers",
+	"NONE"
+];
+var melees = [
+	"Ack & Brunt",
+	"Amphis",
+	"Anku",
+	"Ankyros",
+	"Atterax",
+	"Bo",
+	"Boltace",
+	"Broken Scepter",
+	"Broken War",
+	"Cautacyst",
+	"Ceramic Dagger",
+	"Cerata",
+	"Cronus",
+	"Dakra Prime",
+	"Dark Dagger",
+	"Dark Split-Sword (heavy)",
+	"Dark Split-Sword (dual)",
+	"Dark Sword",
+	"Destreza",
+	"Dex Dakra",
+	"Dual Cleavers",
+	"Dual Ether",
+	"Dual Heat Swords",
+	"Dual Ichor",
+	"Dual Kamas",
+	"Dual Raza",
+	"Dual Skana",
+	"Dual Zoren",
+	"Ether Daggers",
+	"Ether Reaper",
+	"Ether Sword",
+	"Fang",
+	"Fragor",
+	"Furax",
+	"Galantine",
+	"Gazal Machete",
+	"Glaive",
+	"Gram",
+	"Halikar",
+	"Hate",
+	"Heat Dagger",
+	"Heat Sword",
+	"Heliocor",
+	"Hirudo",
+	"Jat Kittag",
+	"Jaw Sword",
+	"Kama",
+	"Karyst",
+	"Kesheg",
+	"Kestrel",
+	"Kogake",
+	"Kronen",
+	"Lacera",
+	"Lecta",
+	"Lesion",
+	"Machete",
+	"Magistar",
+	"Mios",
+	"Mire",
+	"Nami Skyla",
+	"Nami Solo",
+	"Nikana",
+	"Nikondi",
+	"Obex",
+	"Ohma",
+	"Okina",
+	"Orthos",
+	"Orvius",
+	"Pangolin Sword",
+	"Plasma Sword",
+	"Prova",
+	"Reaper",
+	"Redeemer",
+	"Ripkas",
+	"Sarpa",
+	"Scindo",
+	"Scoliac",
+	"Serro",
+	"Shaku",
+	"Sheev",
+	"Sibear",
+	"Silva & Aegis",
+	"Skana",
+	"Sydon",
+	"Tekko",
+	"Tipedo",
+	"Tonbo",
+	"Twin Basolk",
+	"Venka",
+	"War",
+	"NONE"
+];
+var companions = [
+	"Carrier",
+	"Dethcube",
+	"Diriga",
+	"Djinn",
+	"Helios",
+	"Shade",
+	"Taxon",
+	"Wyrm",
+	"Chesa Kubrow",
+	"Helminth Charger",
+	"Huras Kubrow",
+	"Raksa Kubrow",
+	"Sahasa Kubrow",
+	"Sunika Kubrow",
+	"Adarza Kavat",
+	"Smeeta Kavat",
+	"NONE"
+];
+var companionweapon = [
+	"Artax",
+	"Burst Laser",
+	"Deconstructor",
+	"Deth Machine",
+	"Laser Rifle",
+	"Stinger",
+	"Sweeper",
+	"Vulklok",
+	"NONE"
+];
+var modifications = [
+	"Reduced Shields",
+	"Reduced Health",
+	"Energy Reduction",
+	"Reduced Speed",
+	"Reduced Damage",
+	"No HUD"
+];
+var focus = [
+	"Naramon",
+	"Zenurik",
+	"Vazarin",
+	"Unairu",
+	"Madurai"
+];
+//document.getElementById("demo").innerHTML = "1212";
+var ChosenWarframe = RandomChoice (warframes);
+var ChosenCompanion = RandomChoice (companions);
+var Companion = CheckCompanionType (ChosenCompanion);
+var ChosenCompanionWeapon = "NONE";
+
+if (Companion<0){
+
+	do {
+		ChosenCompanionWeapon = RandomChoice (companionweapon);
+        } while (ChosenCompanionWeapon=="Deconstructor" && ChosenCompanion!="Helios");
+}
+
+do {
+	var ChosenPrimary = RandomChoice (primaries);
+	var ChosenSecondary = RandomChoice (secondaries);
+	var ChosenMelee = RandomChoice (melees);
+	}
+	while (ChosenPrimary==ChosenSecondary==ChosenMelee);
+
+
+document.getElementById("demo").innerHTML = "Warfrane: " + ChosenWarframe + "<br />" +
+"Primary: " + ChosenPrimary + "<br />" +
+"Secondary: " + ChosenSecondary + "<br />" +
+"Melee: " + ChosenMelee + "<br />" +
+"Companion: " + ChosenCompanion + "<br />"+
+"Companion Weapon: " + ChosenCompanionWeapon;
+
+ 
+ 
+function RandomChoice (pile) { return pile[Math.floor(Math.random() * pile.length)]; }
+function CheckCompanionType (companion) {	return  companion.search (" ");}
+</script>
+
+</body>
+</html>
+
+
